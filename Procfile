@@ -1,1 +1,1 @@
-uvicorn back-end.main:app --reload
+web gunicorn back-end.main:app
