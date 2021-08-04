@@ -1,1 +1,1 @@
-web gunicorn back-end.main:app
+uvicorn back-end.main:app
