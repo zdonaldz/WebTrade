@@ -25,7 +25,7 @@ def up_img_to_cloud(img, img_id):
 
 #--------------------POST-------------------------------------------
 @router.post('/')
-def create_posts(name:str = Form(...), user_id:int = Form(...), category:int = Form(...),
+async def create_posts(name:str = Form(...), user_id:int = Form(...), category:int = Form(...),
             description:str = Form(...), ward_code:int = Form(...),
             images: List[UploadFile]= File(...) ,db: Session = Depends(get_db)):
     
