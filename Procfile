@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT --threads=$WEB_CONCURRENCY --asyncore-use-poll --backlog=4096 back-end.main:app
+web: uvicorn app.main:app --host=0.0.0.0 --port=${PORT:-5000}
