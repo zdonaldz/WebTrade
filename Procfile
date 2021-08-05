@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker back-end.main:app
+web: waitress-serve --port=$PORT back-end.main:app
