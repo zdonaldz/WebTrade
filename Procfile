@@ -1,1 +1,1 @@
-web: uvicorn back-end.main:app --host=0.0.0.0 --port=${PORT:-5000}
+web: waitress-serve --port=$PORT back-end.:app
